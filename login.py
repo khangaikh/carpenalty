@@ -22,7 +22,7 @@ save = open("yourcaptcha.png", 'wb')
 save.write(image)
 save.close()
 
-cap = image_to_string(Image.open('yourcaptcha.png'))
+cap = image_to_string(Image.open('yourcaptcha.png'),config='digits -psm 7')
 
 br.select_form(nr = 0)
 br.form['plateNumber'] = str(sys.argv[1])
