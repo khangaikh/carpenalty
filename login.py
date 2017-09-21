@@ -31,4 +31,4 @@ response = br.submit()
 
 form_result = response.read()
 parsed_html = BeautifulSoup(form_result)
-print parsed_html.body.find('div', attrs={'class':'container-fluid'}).text
+print parsed_html.body.find('ul', attrs={'class':'list-group'})
